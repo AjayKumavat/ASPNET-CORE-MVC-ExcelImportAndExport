@@ -1,0 +1,39 @@
+﻿@model List<CORE_MVC_ExcelImportAndExport.Models.User>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <a asp-controller="Users" asp-action="ExportToExcel" class="btn btn-primary">
+            Export To Excel
+        </a>
+    </div>
+    <div class="col-md-6">
+        <a asp-controller="Users" asp-action="BatchUserUpload" class="btn btn-primary">
+            Import To Excel
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>Phone</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Name</td>
+                    <td>@user.Email</td>
+                    <td>@user.Phone</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

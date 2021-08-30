@@ -1,0 +1,11 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <form asp-controller="Users" asp-action="BatchUserUpload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <lable>Upload File</lable>
+                <input id="batchUsers" name="batchUsers" class="form-control" type="file" />
+                <button type="submit" class="btn btn-success">Upload User</button>
+            </div>
+        </form>
+    </div>
+</div>
